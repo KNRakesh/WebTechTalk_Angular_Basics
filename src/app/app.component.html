@@ -1,3 +1,16 @@
-<app-header></app-header>
-<app-body></app-body>
-<app-footer></app-footer>
+<div class="body-container">
+  <div class="d-flex justify-content-center bg-success">
+    <app-header></app-header>
+  </div>
+  <div class="central-container d-flex nowrap">
+    <div class="side-panel">
+      <app-side-nav></app-side-nav>
+    </div>
+    <div class="main-body align-self-center align-items-stretch flex-grow-1">
+      <app-main-body></app-main-body>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center bg-dark">
+    <app-footer></app-footer>
+  </div>
+</div>
