@@ -1,0 +1,24 @@
+<div class="container">
+  <h1><u>Data Binding</u></h1>
+  <h2><u>String Interpolation</u></h2>
+  <span>My name is {{ firstName }}</span>
+  <h2><u>Property Binding</u></h2>
+  <img [src]="imgPath" alt="" />
+
+  <h2><u>Event Binding</u></h2>
+  <input type="text" (input)="passValueToComponent($event)" />
+
+  <h2><u>2-Way Data Binding</u></h2>
+  <input type="text" [(ngModel)]="defaultValue" />
+  <span>{{ defaultValue }}</span>
+</div>
+
+<hr />
+
+<h2>Data Binding</h2>
+<input type="text" [(ngModel)]="taskDefaultValue" />
+<span>{{ taskDefaultValue }}</span
+><br />
+<button type="button" [disabled]="submitted" (click)="verifyText($event)">
+  Check form
+</button>

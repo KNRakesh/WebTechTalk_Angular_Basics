@@ -1,0 +1,49 @@
+<div>
+  <p #channelName>WebTechTalk</p>
+  <input type="text" #myInput ngModel />
+  <button
+    [disabled]="myInput.value.length === 0"
+    (click)="sendInput(myInput, channelName)"
+  >
+    Click
+  </button>
+  <!-- <div>{{inputRececived}}</div> -->
+</div>
+<br /><br />
+<hr />
+<br /><br />
+
+<!-- TASK -->
+
+<div class="d-flex justify-content-center">
+  <h1>Analyze Word</h1>
+</div>
+<div class="d-flex justify-content-center m-3">
+  <input type="text" #taskInput (input)="typedInput(taskInput)" />
+</div>
+<div class="result" *ngIf="taskInput.value.length">
+  <div class="d-flex justify-content-center m-3">
+    <h3>Results</h3>
+  </div>
+  <div class="d-flex justify-content-center m-3">
+    <h4>Number of characters: {{taskInput.value.length}}</h4>
+  </div>
+  <div class="d-flex justify-content-center m-3">
+    <h5>Vowels</h5>
+  </div>
+  <div class="d-flex justify-content-center m-1">
+    <h5>a: {{countOfa}}</h5>
+  </div>
+  <div class="d-flex justify-content-center m-1">
+    <h5>e: {{countOfe}}</h5>
+  </div>
+  <div class="d-flex justify-content-center m-1">
+    <h5>i: {{countOfi}}</h5>
+  </div>
+  <div class="d-flex justify-content-center m-1">
+    <h5>o: {{countOfo}}</h5>
+  </div>
+  <div class="d-flex justify-content-center m-1">
+    <h5>u: {{countOfu}}</h5>
+  </div>
+</div>

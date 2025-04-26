@@ -1,0 +1,15 @@
+.body {
+    height: 100vh;
+    width: 100vw;
+    background-color: pink;
+  }
+  
+  .hover-heading {
+    color: red;
+  }
+  
+  .hover-heading:hover {
+    color: green;
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,66 @@
+<div class="body">
+  <div class="py-5">
+    <h2 class="text-primary d-flex justify-content-center py-5">
+      Model Driven Appraoch (Reactive Forms)
+    </h2>
+  </div>
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Username</label>
+      <input
+        type="email"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        formControlName="uname"
+      />
+      <small
+        *ngIf="!myForm?.get('uname')?.valid && myForm?.get('uname')?.touched"
+        >Username is required</small
+      >
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label"
+        >Email address</label
+      >
+      <input
+        type="email"
+        class="form-control"
+        id="exampleInputPassword1"
+        formControlName="email"
+      />
+      <small
+        *ngIf="
+      myForm?.get('email')?.errors &&
+      myForm?.get('email')?.errors?.['required'] &&
+      myForm?.get('email')?.touched
+    "
+        >Email is required</small
+      >
+
+      <small
+        *ngIf="
+      myForm?.get('email')?.errors &&
+      myForm?.get('email')?.errors?.['email'] &&
+      myForm?.get('email')?.touched
+    "
+        >Email address should be valid</small
+      >
+    </div>
+    <div class="mb-3 form-check">
+      <input
+        type="checkbox"
+        class="form-check-input"
+        id="exampleCheck1"
+        formControlName="readTerms"
+      />
+      <label class="form-check-label" for="exampleCheck1"
+        >I have read the terms & conditions</label
+      >
+    </div>
+    <button type="button" (click)="accept()">Accept</button>
+    <button type="submit" class="btn btn-primary" [disabled]="!myForm.valid">
+      Submit
+    </button>
+  </form>
+</div>

@@ -1,0 +1,9 @@
+<div>
+  <h1>Child Component</h1>
+  <p>Please subscribe to {{ channelName }}</p>
+  <input type="text" (input)="sendMessageToParent($event)" />
+</div>
+<!-- Since we dont have acces to parent within the child, we can't use property binding -->
+<!-- So we use event binding & event emitter approach -->
+
+

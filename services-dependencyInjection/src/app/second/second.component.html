@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="p-5">
+    <h3>Second Page</h3>
+    <div class="d-flex justify-content-between me-5">
+      <span>
+        <span>First Number</span>
+        <div>
+          <input
+            type="number"
+            [placeholder]="0"
+            #firstNumber
+            (input)="getFirstNumber(firstNumber)"
+          />
+        </div>
+      </span>
+      <h3 class="align-self-end">+</h3>
+      <span>
+        <span>Second Number</span>
+        <div>
+          <input
+            type="number"
+            [placeholder]="0"
+            #secondNumber
+            (input)="getSecondNumber(secondNumber)"
+          />
+        </div>
+      </span>
+      <h3 class="align-self-end">=</h3>
+      <h3 class="align-self-end">{{ result }}</h3>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="output">Previous page value is {{ prevPageValue }}</div>
+      </div>
+    </div>
+    <div class="my-3">
+      <button
+        (click)="calculateTotal()"
+        class="me-3 bg-primary text-white rounded px-5"
+      >
+        Calculate
+      </button>
+      <button class="bg-danger text-white rounded px-5" (click)="goToFirst()">
+        Previous Page
+      </button>
+    </div>
+  </div>
+</div>

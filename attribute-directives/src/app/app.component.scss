@@ -1,0 +1,50 @@
+.red {
+    color: white;
+    background-color: red;
+}
+
+.green-color {
+    color: white;
+    background-color: green;
+}
+
+.blue {
+    color: white;
+    background-color: blue;
+}
+
+// TASK
+
+.buttonContainer {
+    width: 80vw;
+}
+
+.numberBtn {
+    background-color: green;
+    margin: 1rem;
+    padding: 0.5rem;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.clearBtn {
+    @extend .numberBtn;
+    background-color: red;
+}
+
+.numbers {
+    padding: 10px;
+    margin: 10px;
+    border: solid 1px;
+    height: fit-content;
+    width: 50px;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.highlight {
+    color: red;
+    background-color: rgb(197, 197, 197);
+}

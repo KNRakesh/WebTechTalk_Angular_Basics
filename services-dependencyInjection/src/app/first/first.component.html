@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="p-5">
+    <h3>First Page</h3>
+    <div class="d-flex justify-content-between me-5">
+      <span>
+        <span>First Number</span>
+        <div>
+          <input
+            type="number"
+            [placeholder]="0"
+            #firstNumber
+            (input)="getFirstNumber(firstNumber)"
+          />
+        </div>
+      </span>
+      <h3 class="align-self-end">+</h3>
+      <span>
+        <span>Second Number</span>
+        <div>
+          <input type="number" [placeholder]="0" #secondNumber
+          (input)="getSecondNumber(secondNumber)" />
+        </div>
+      </span>
+      <h3 class="align-self-end">=</h3>
+      <h3 class="align-self-end">{{result}}</h3>
+    </div>
+    <div class="my-3">
+      <button
+      (click)="calculateTotal()"
+        class="me-3 bg-primary text-white rounded px-5"
+        >
+        <!-- (click)="calculate(firstNumber, secondNumber)" -->
+        Calculate
+      </button>
+      <button class="bg-danger text-white rounded px-5" (click)="goToSecond()">
+        Next Page
+      </button>
+    </div>
+  </div>
+</div>

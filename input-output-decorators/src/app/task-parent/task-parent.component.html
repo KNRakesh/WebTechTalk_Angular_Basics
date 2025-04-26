@@ -1,0 +1,25 @@
+<hr />
+<div class="outer">
+  <div class="mainContainer d-flex justify-content-center">
+    <span class="flex-grow-10">
+      <h2 class="p-3">Task</h2>
+    </span>
+  </div>
+  <div class="btnContainer d-flex justify-content-evenly">
+    <button class="btnStyles" (click)="typeSelection('color')">Colors</button>
+    <button class="btnStyles" (click)="typeSelection('fruit')">Fruits</button>
+    <button class="btnStyles" (click)="typeSelection('animal')">Animals</button>
+  </div>
+  <div>
+    <p class="text-center" *ngIf="isMessageDisplayed">
+      Selected Item is {{ finalSelectedItem }}
+    </p>
+  </div>
+</div>
+<app-task-child
+  [arrayFromParent]="items"
+  [selectedTypeFromParent]="selectedType"
+  [filteredItemsFromParent]="filteredItems"
+  (emitToParent)="mySelectedItem($event)"
+  (msgToParent)="mySelectedMsg($event)"
+></app-task-child>

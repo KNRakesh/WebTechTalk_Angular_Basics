@@ -1,0 +1,14 @@
+<div>
+  <h1>Parent Component</h1>
+  <input type="text" [(ngModel)]="channelNameInParent" />
+  <p>{{messageFromChild}}</p>
+  <!-- Instead of using string interpolation to get the 2-way data -->
+  <!-- <p>
+    {{ channelNameInParent }}
+  </p> -->
+</div>
+<!-- We bind the child's property to the parent's variable name -->
+<app-child
+  [channelName]="channelNameInParent"
+  (sendMessageEmitter)="receiveMessage($event)"
+></app-child>
