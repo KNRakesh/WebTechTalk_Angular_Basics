@@ -1,10 +1,11 @@
 import { Component, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { SharedService } from '../shared.service';
+import { TaskFirstComponent } from '../task-first/task-first.component';
 
 @Component({
   selector: 'app-first',
-  imports: [],
+  imports: [TaskFirstComponent],
   templateUrl: './first.component.html',
   styleUrl: './first.component.scss',
 })

@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="p-5">
+    <h3>Second Component</h3>
+    <div class="d-flex justify-content-between me-5">
+      <span>
+        <div>
+          <select id="shapes" name="shape" [(ngModel)]="shape">
+            <option value="" selected>Select Shape</option>
+            <option value="square">Square</option>
+            <option value="rectangle">Rectangle</option>
+            <option value="circle">Circle</option>
+          </select>
+        </div>
+      </span>
+      <span>
+        <div>
+          <select id="colors" name="color" [(ngModel)]="color">
+            <option value="" selected>Select Color</option>
+            <option value="yellow">Yellow</option>
+            <option value="brown">Brown</option>
+            <option value="orange">Orange</option>
+          </select>
+        </div>
+      </span>
+      <button
+        class="me-3 bg-primary text-white rounded px-5"
+        (click)="getclass(shape, color, object)"
+      >
+        Draw
+      </button>
+    </div>
+    <div class="output-container m-5 ms-0">
+      <div class="output">
+        <div class="object" #object></div>
+      </div>
+    </div>
+  </div>
+</div>

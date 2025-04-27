@@ -1,10 +1,11 @@
 import { SharedService } from './../shared.service';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { TaskSecondComponent } from '../task-second/task-second.component';
 
 @Component({
   selector: 'app-second',
-  imports: [],
+  imports: [TaskSecondComponent],
   templateUrl: './second.component.html',
   styleUrl: './second.component.scss',
 })

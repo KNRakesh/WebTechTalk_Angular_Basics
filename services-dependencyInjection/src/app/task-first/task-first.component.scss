@@ -1,0 +1,67 @@
+.container {
+  background-color: pink;
+  margin-bottom: 5em;
+}
+
+select {
+  width: 20em;
+}
+
+.output-container {
+  height: auto;
+}
+
+.output {
+  height: 8em;
+  width: 20em;
+  margin-left: 0;
+  margin-bottom: auto;
+}
+
+.square-red {
+  height: 10em;
+  width: 10em;
+  background-color: red;
+}
+
+.rectangle-red {
+  @extend .square-red;
+  width: 15em;
+}
+
+.circle-red {
+  @extend .square-red;
+  border-radius: 100%;
+}
+
+.square-blue {
+  height: 10em;
+  width: 10em;
+  background-color: blue;
+}
+
+.rectangle-blue {
+  @extend .square-blue;
+  width: 15em;
+}
+
+.circle-blue {
+  @extend .square-blue;
+  border-radius: 100%;
+}
+
+.square-green {
+  height: 10em;
+  width: 10em;
+  background-color: green;
+}
+
+.rectangle-green {
+  @extend .square-green;
+  width: 15em;
+}
+
+.circle-green {
+  @extend .square-green;
+  border-radius: 100%;
+}

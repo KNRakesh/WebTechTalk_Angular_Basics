@@ -17,18 +17,22 @@
       <span>
         <span>Second Number</span>
         <div>
-          <input type="number" [placeholder]="0" #secondNumber
-          (input)="getSecondNumber(secondNumber)" />
+          <input
+            type="number"
+            [placeholder]="0"
+            #secondNumber
+            (input)="getSecondNumber(secondNumber)"
+          />
         </div>
       </span>
       <h3 class="align-self-end">=</h3>
-      <h3 class="align-self-end">{{result}}</h3>
+      <h3 class="align-self-end">{{ result }}</h3>
     </div>
     <div class="my-3">
       <button
-      (click)="calculateTotal()"
+        (click)="calculateTotal()"
         class="me-3 bg-primary text-white rounded px-5"
-        >
+      >
         <!-- (click)="calculate(firstNumber, secondNumber)" -->
         Calculate
       </button>
@@ -38,3 +42,8 @@
     </div>
   </div>
 </div>
+<br /><br />
+
+<!-- TASK -->
+
+<app-task-first></app-task-first>
